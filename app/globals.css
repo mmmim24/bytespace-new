@@ -100,3 +100,14 @@ button{
   background-size: cover;
   background-color: var(--color-electric-lime-400);
 }
+
+#hero{
+  background-color: var(--color-persian-blue-800);
+  background-image: linear-gradient(to right, rgba(255,255,255,0.4) 0.05px, transparent 0.75px),
+  linear-gradient(to bottom, rgba(255,255,255,0.4) 0.05px, transparent 0.75px);
+  background-size: 120px 120px, 120px 120px, 100% 100%, 100% 100%;
+  /* background-image: url('../public/Hero_Frame.png'); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-size: cover; */
+}
