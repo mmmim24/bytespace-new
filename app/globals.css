@@ -111,3 +111,11 @@ button{
   /* background-position: center; */
   /* background-size: cover; */
 }
+
+#info{
+  background-image: url('../public/Info_Frame.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--color-electric-lime-400);
+}
