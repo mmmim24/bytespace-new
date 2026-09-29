@@ -71,7 +71,7 @@ export default async function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <footer className="mx-auto w-full max-w-7xl px-8 py-18">
 
             <div className="grid grid-cols-2 gap-24">
 
@@ -86,20 +86,20 @@ export default async function Footer() {
 
                     <div className="flex flex-col gap-6">
 
-                        <div className="flex gap-6 h-13">
+                        <div className="flex gap-6 h-12">
                             <input placeholder="Enter your Email" className="flex-1 border border-zinc-200 px-6 py-4 rounded-4xl" />
                             <button className="bg-lime-300 px-6 py-3 rounded-4xl w-26">Search</button>
                         </div>
 
-                        <p className="text-[12px]">By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.</p>
+                        <p className="text-xs">By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.</p>
 
                     </div>
 
                 </div>
 
-                <div className="grid grid-cols-3 justify-center sm:justify-start items-center sm:items-start text-center sm:text-left gap-x-10">
+                <div className="grid grid-cols-3 gap-x-10 text-sm mt-12">
                     {footerLinks.map((link) => (
-                        <div key={link.name}>
+                        <div key={link.name} className="self-end">
                             <Link
                                 href={link.href}
                                 target="_blank"
@@ -112,7 +112,7 @@ export default async function Footer() {
                 </div>
             </div>
 
-            <div className="mt-12 border-t border-zinc-200 pt-8 sm:flex sm:items-center text-xs sm:justify-between text-center sm:text-left">
+            <div className="mt-12 border-t border-zinc-200 pt-8 flex items-center justify-between text-xs">
                 <p >
                     &copy; {currentYear} ByteSpace. All rights reserved.
                 </p>

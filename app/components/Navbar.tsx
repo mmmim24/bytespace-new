@@ -24,7 +24,7 @@ export default async function Navbar() {
     return (
         <header className="fixed top-0 h-30 z-49 w-full bg-transparent backdrop-blur-sm text-white">
 
-            <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-8 h-16">
 
                 <Link href="/" className="text-xl text-zinc-900">
                     <Image className='w-auto h-auto' width={171} height={37} src={"/logo_text.png"} loading="eager" alt="ByteSpace New"></Image>
