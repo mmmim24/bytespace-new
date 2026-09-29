@@ -71,7 +71,7 @@ export default async function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="mx-auto w-full max-w-7xl px-8 py-18">
+        <footer className="mx-auto w-full max-w-7xl px-8 pt-18 flex flex-col gap-32.5">
 
             <div className="grid grid-cols-2 gap-24">
 
@@ -87,8 +87,8 @@ export default async function Footer() {
                     <div className="flex flex-col gap-6">
 
                         <div className="flex gap-6 h-12">
-                            <input placeholder="Enter your Email" className="flex-1 border border-zinc-200 px-6 py-4 rounded-4xl" />
-                            <button className="bg-lime-300 px-6 py-3 rounded-4xl w-26">Search</button>
+                            <input placeholder="Enter your Email" className="flex-1 border border-shuttle-gray-100 px-6 py-4 rounded-4xl" />
+                            <button>Search</button>
                         </div>
 
                         <p className="text-xs">By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.</p>
@@ -112,7 +112,7 @@ export default async function Footer() {
                 </div>
             </div>
 
-            <div className="mt-12 border-t border-zinc-200 pt-8 flex items-center justify-between text-xs">
+            <div className="my-6 border-t border-shuttle-gray-100 pt-6 flex items-center justify-between text-xs">
                 <p >
                     &copy; {currentYear} ByteSpace. All rights reserved.
                 </p>
