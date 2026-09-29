@@ -3,8 +3,6 @@ import { Poppins } from "next/font/google";
 // import localFont from "next/font/local";
 import "./globals.css";
 import "@/fonts/satoshi/css/satoshi.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -34,19 +32,15 @@ export const metadata: Metadata = {
   description: "Get Access to Hundreds Courses Available",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html
-      lang="en"
-      className={`h-full antialiased`}
-    >
+    <html lang="en" className="h-full antialiased">
       <body className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-1">
-          {children}
-
-        </main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
