@@ -6,6 +6,39 @@
 }
 
 @theme inline {
+  --color-persian-blue-50: #37f6ff;
+  --color-persian-blue-100: #d3eeff;
+  --color-persian-blue-200: #b0ddff;
+  --color-persian-blue-300: #81c5ff;
+  --color-persian-blue-400: #4f9dff;
+  --color-persian-blue-500: #2872ff;
+  --color-persian-blue-600: #0445ff;
+  --color-persian-blue-700: #0043ff;
+  --color-persian-blue-800: #003be2;
+  --color-persian-blue-900: #0b36a4;
+  --color-persian-blue-950: #071e5f;
+  --color-electric-lime-50: #FDFFE4;
+  --color-electric-lime-100: #FAFFC5;
+  --color-electric-lime-200: #F2FF92;
+  --color-electric-lime-300: #E4FF54;
+  --color-electric-lime-400: #D4FB20;
+  --color-electric-lime-500: #CBFC01;
+  --color-electric-lime-600: #8CB400;
+  --color-electric-lime-700: #6A8902;
+  --color-electric-lime-800: #546B09;
+  --color-electric-lime-900: #465A0D;
+  --color-electric-lime-950: #243300;
+  --color-shuttle-gray-50: #f5f5f6;
+  --color-shuttle-gray-100: #e5e6e8;
+  --color-shuttle-gray-200: #ced0d3;
+  --color-shuttle-gray-300: #abaeb5;
+  --color-shuttle-gray-400: #82868e;
+  --color-shuttle-gray-500: #666973;
+  --color-shuttle-gray-600: #585a62;
+  --color-shuttle-gray-700: #4b4c53;
+  --color-shuttle-gray-800: #424348;
+  --color-shuttle-gray-900: #3a3b3f;
+  --color-shuttle-gray-950: #242528;
   /* --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-poppins);
@@ -19,7 +52,7 @@
   }
 } */
 
-h1{
+h1,h2,h3,h4,h5,h6{
   font-family: "Poppins", Helvetica, sans-serif;
 }
 
@@ -27,4 +60,22 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Satoshi-Regular", Helvetica, sans-serif;
+}
+.font-gradient{
+  background-image: linear-gradient(
+    to bottom,
+    rgba(212, 251, 32, 1) 0%,
+    rgba(212, 251, 32, 0.96) 25%,
+    rgba(212, 251, 32, 0.81) 50%,
+    rgba(212, 251, 32, 0.61) 68%,
+    rgba(212, 251, 32, 0) 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+.bg-primary{
+  background-color: var(--color-persian-blue-800);
+  background-image: linear-gradient(to right, rgba(255,255,255,0.4) 0.05px, transparent 0.75px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.4) 0.05px, transparent 0.75px);
+  background-size: 120px 120px, 120px 120px, 100% 100%, 100% 100%;
 }
