@@ -1,0 +1,69 @@
+import Link from "next/link";
+import Image from "next/image";
+import { ShoppingBag } from "lucide-react";
+
+interface NavItem {
+    name: string | React.ReactElement;
+    href: string;
+}
+
+const navItems: NavItem[] = [
+    { name: "Home", href: "#home" },
+    { name: "Courses", href: "#courses" },
+    { name: "Creators", href: "#creators" }
+];
+
+const links: NavItem[] = [
+    { name: "Sign in", href: "/login" },
+    { name: "Join Us", href: "/register" },
+    { name: <ShoppingBag />, href: "/cart" }
+]
+
+export default async function Navbar() {
+
+    return (
+        <header className="fixed top-0 h-30 z-49 w-full bg-transparent backdrop-blur-sm text-white">
+
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
+
+                <Link href="/" className="text-xl text-zinc-900">
+                    <Image className='w-auto h-auto' width={171} height={37} src={"/logo_text.png"} loading="eager" alt="ByteSpace New"></Image>
+                </Link>
+
+                <div className="flex items-center justify-center overflow-hidden">
+
+                    <nav className="flex z-1 items-center px-4 py-2 space-x-6">
+                        {navItems.map((item, id) => {
+
+                            return (
+                                <Link
+                                    key={id}
+                                    href={item.href}
+                                >
+                                    {item.name}
+                                </Link>
+                            );
+                        })}
+                    </nav>
+                </div>
+
+                <div className="flex z-1 items-center px-4 py-2 space-x-6">
+                    {links.map((item, id) => {
+
+                        return (
+                            <Link
+                                key={id}
+                                href={item.href}
+                            >
+                                {item.name}
+                            </Link>
+                        );
+                    })}
+                </div>
+
+            </div>
+
+
+        </header>
+    );
+}

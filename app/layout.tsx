@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 // import localFont from "next/font/local";
 import "./globals.css";
 import "@/fonts/satoshi/css/satoshi.css";
+import Navbar from "./components/Navbar";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -36,9 +37,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${poppins.className}} h-full antialiased`}
+      className={`h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1">
+          {children}
+
+        </main>
+      </body>
     </html>
   );
 }
