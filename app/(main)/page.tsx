@@ -1,4 +1,5 @@
 import { Clients } from "../components/Clients";
+import { Testimonials } from "../components/Testimonials";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
 
             </div>
             <Clients />
+            <Testimonials />
         </>
     );
 }
