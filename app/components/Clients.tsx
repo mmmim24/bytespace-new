@@ -5,6 +5,8 @@ import logo4 from "@/public/logo4.png"
 import logo5 from "@/public/logo5.png"
 import Image from "next/image"
 
+import Marquee from "react-fast-marquee";
+
 const clients = [
     { name: "client1", logo: logo1 },
     { name: "client2", logo: logo2 },
@@ -17,13 +19,17 @@ export function Clients() {
     return (
         <section className="bg-shuttle-gray-50 h-50 w-full mx-auto py-8 flex flex-col justify-center">
             <div className="w-full max-w-7xl mx-auto px-8 flex justify-between">
-                {
-                    clients.map(client =>
-                        <div key={client.name}>
-                            <Image src={client.logo} alt={client.name} width={200} height={50} />
-                        </div>
-                    )
-                }
+                <Marquee autoFill={true} pauseOnHover={true} speed={50}>
+                    <ul className="flex items-center justify-center gap-10 first:ml-10">
+                        {
+                            clients.map(client =>
+                                <li key={client.name}>
+                                    <Image src={client.logo} alt={client.name} width={200} height={50} />
+                                </li>
+                            )
+                        }
+                    </ul>
+                </Marquee>
             </div>
         </section>
     )

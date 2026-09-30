@@ -9,8 +9,8 @@ export default async function Register() {
             <div className="w-1/2 h-180 flex flex-col justify-between">
 
                 <div className="space-y-4">
-                    <h1 className="font-medium text-xl">Sign up and come in</h1>
-                    <p className="text-lg">The registration process is straightforward, uncomplicated, and efficient, allowing users to sign up quickly, easily, and at no cost</p>
+                    <h1 className="font-semibold text-xl">Sign up and come in</h1>
+                    <p className="font-body text-lg">The registration process is straightforward, uncomplicated, and efficient, allowing users to sign up quickly, easily, and at no cost</p>
                 </div>
 
                 <div>

@@ -32,13 +32,14 @@ export default async function Navbar() {
 
                 <div className="flex items-center justify-center overflow-hidden">
 
-                    <nav className="flex z-1 items-center px-4 py-2 space-x-6">
+                    <nav className="flex z-1 items-center space-x-6">
                         {navItems.map((item, id) => {
 
                             return (
                                 <Link
                                     key={id}
                                     href={item.href}
+                                    className="font-body"
                                 >
                                     {item.name}
                                 </Link>
@@ -47,13 +48,14 @@ export default async function Navbar() {
                     </nav>
                 </div>
 
-                <div className="flex z-1 items-center px-4 py-2 space-x-6">
+                <div className="flex z-1 items-center space-x-6">
                     {links.map((item, id) => {
 
                         return (
                             <Link
                                 key={id}
                                 href={item.href}
+                                className="font-body"
                             >
                                 {item.name}
                             </Link>

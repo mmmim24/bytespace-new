@@ -9,8 +9,8 @@ export default async function Login() {
             <div className="w-1/2 h-180 flex flex-col justify-between">
 
                 <div className="space-y-4">
-                    <h1 className="font-medium text-xl">Sign in with ease</h1>
-                    <p className="text-lg">Experience a seamless and efficient sign-in process that grants you instant access to a world of knowledge.</p>
+                    <h1 className="font-semibold text-xl">Sign in with ease</h1>
+                    <p className="font-body text-lg">Experience a seamless and efficient sign-in process that grants you instant access to a world of knowledge.</p>
                 </div>
 
                 <div>

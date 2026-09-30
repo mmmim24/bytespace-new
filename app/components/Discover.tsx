@@ -39,7 +39,7 @@ export function Discover() {
 
                     <h3 className="w-147 text-5xl text-shuttle-gray-950 font-semibold">Discover Your Passion, Build Your Skills</h3>
 
-                    <p className="w-230 text-shuttle-gray-400 text-lg">At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life.</p>
+                    <p className="w-230 text-shuttle-gray-400 text-lg font-body">At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life.</p>
 
                 </div>
 
@@ -49,18 +49,18 @@ export function Discover() {
 
                     <h4 className="text-4xl text-shuttle-gray-950 font-semibold">Explore Diverse Learning Paths at Bytespace</h4>
 
-                    <p className="w-230 text-shuttle-gray-400 text-lg">At Bytespace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various fields, ensuring there's something for everyone. Unleash your potential and explore our carefully curated categories.</p>
+                    <p className="w-230 text-shuttle-gray-400 text-lg font-body">At Bytespace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various fields, ensuring there's something for everyone. Unleash your potential and explore our carefully curated categories.</p>
 
                 </div>
 
                 <div className="flex gap-10">
                     {
                         learningPaths.map(el =>
-                            <div key={el.name} className="flex flex-col gap-2 items-center justify-center rounded-3xl border border-shuttle-gray-200 h-42 w-42 ">
+                            <div key={el.name} className="flex flex-col gap-2 items-center justify-center rounded-3xl border border-shuttle-gray-200 h-42 w-42 hover:shadow-2xl hover:border-persian-blue-800 transition-all duration-500 cursor-pointer">
 
                                 <div className="bg-electric-lime-400 rounded-full h-15 w-15 flex items-center justify-center"><Image src={el.icon} alt={el.name} /></div>
 
-                                <div className="text-xl font-medium">{el.name}</div>
+                                <div className="text-xl font-label">{el.name}</div>
 
                             </div>
                         )
