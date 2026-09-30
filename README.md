@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bytespace
 
-## Getting Started
+Bytespace is a web-only frontend project built as an online assessment for a frontend engineer role at [Dointech](https://doin.tech/). It implements a website design scaffolded from a Figma design using Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+The interface is intended for desktop web browsers and is not designed to be responsive for mobile phones or tablets. AI assistance during implementation was minimal and limited to suggestions from VS Code Copilot.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The project is deployed on [Vercel](https://bytespace-new-amber.vercel.app/).
+
+## Tech Stack
+
+- Next.js 16 with the App Router
+- React 19 and TypeScript
+- Tailwind CSS 4
+- pnpm (the repository's declared package manager); npm can also be used
+
+## Project Structure
+
+```text
+app/
+  (auth)/                 # Authentication route group
+    layout.tsx
+    login/page.tsx        # /login
+    register/page.tsx     # /register
+  (main)/
+    layout.tsx
+    page.tsx              # Main landing page (/)
+  components/             # Page sections and shared UI components
+    Clients.tsx
+    Courses.tsx
+    CTA.tsx
+    Discover.tsx
+    Footer.tsx
+    Hero.tsx
+    Info.tsx
+    Login.tsx
+    Navbar.tsx
+    Register.tsx
+    Testimonials.tsx
+    floating-objects/
+  utils/                  # Shared data and helpers
+    data.ts
+    lib.ts
+  globals.css
+  layout.tsx
+  not-found.tsx
+fonts/
+  satoshi/                # Local Satoshi font files and CSS
+public/
+  assets/                 # Images and other static assets
+    clients/
+    courses/
+    frames/
+    learning-paths/
+    logo/
+    objects/
+    testimonials/
+    users/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You will need Node.js installed. From the project root, choose either pnpm or npm to install dependencies and start the development server.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Using pnpm
 
-## Learn More
+```bash
+pnpm install
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Using npm
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm install
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000) in a browser. The development server supports hot reloading as you edit the project.
 
-## Deploy on Vercel
+## Available Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm dev       # Start the development server
+pnpm build     # Create a production build
+pnpm start     # Run the production server (after building)
+pnpm lint      # Run ESLint
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+With npm, use `npm run` followed by the same script name, for example `npm run build` or `npm run lint`.
