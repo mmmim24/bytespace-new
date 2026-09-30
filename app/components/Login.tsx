@@ -4,7 +4,7 @@ import Link from "next/link"
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export default function LoginForm() {
+export function LoginForm() {
     return (
         <div className="flex flex-col justify-between">
             <div className="m-15 flex flex-col gap-10">
@@ -13,7 +13,7 @@ export default function LoginForm() {
                     <p className="font-body text-lg text-persian-blue-800">
                         Sign In
                     </p>
-                    <h1 className="text-[44px] leading-13 font-semibold text-shuttle-gray-950">
+                    <h1 className="text-[44px] font-semibold text-shuttle-gray-950">
                         Welcome Back
                     </h1>
                 </div>

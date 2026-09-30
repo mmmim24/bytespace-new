@@ -1,15 +1,7 @@
-import Sarah from "@/public/Sarah.png"
-import James from "@/public/James.png"
-import Alex from "@/public/Alex.png"
 import Image from "next/image"
+import { testimonials } from "@/app/utils/data";
 
-const testimonials = [
-    { image: Sarah, name: "Sarah Maddison", designation: "Enthusiastic Learner", quote: "ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning." },
-    { image: James, name: "James Litt", designation: "Lifelong Learner", quote: "I've tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development." },
-    { image: Alex, name: "Alex Bruke", designation: "Inspired Creator", quote: "As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It's fulfilling to see my courses making a positive impact on learners globally." },
-]
-
-export function Testimonials() {
+export async function Testimonials() {
     return (
         <section id="testimonials" className="min-h-195 w-full mx-auto py-8 flex flex-col justify-center">
             <div className="w-full max-w-7xl mx-auto px-8 flex flex-col gap-18 justify-between">
