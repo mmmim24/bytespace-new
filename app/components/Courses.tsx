@@ -10,7 +10,6 @@ import Ellipse from "@/public/Ellipse.png";
 import Ellipse_1 from "@/public/Ellipse_1.png";
 import Ellipse_2 from "@/public/Ellipse_2.png";
 import Ellipse_3 from "@/public/Ellipse_3.png";
-import others from "@/public/26+.png";
 import Image from "next/image";
 import { ChartNoAxesColumnIncreasing, Star } from "lucide-react";
 
@@ -39,8 +38,7 @@ const users = [
     { user: Ellipse },
     { user: Ellipse_1 },
     { user: Ellipse_2 },
-    { user: Ellipse_3 },
-    { user: others }
+    { user: Ellipse_3 }
 ]
 
 const minutesToHours = (minutes: number) => {
@@ -56,19 +54,19 @@ const courses = [
         category: ["Featured", "UI/UX Design"], cover: figma, name: "Learn Figma from Basic", author: "purepearl studio", rating: 4.5, level: "beginner", price: 25, duration: "lifetime", lessons: 17, length: 136, comments: 59
     },
     {
-        category: ["Featured", "Digital Illustration"], cover: digital_asset, name: "Build Digital Asset", author: "purepearl studio", rating: 4.5, level: "beginner", price: 25, duration: "lifetime", lessons: 30, length: 300, comments: 200
+        category: ["Featured", "Digital Illustration"], cover: digital_asset, name: "Build Digital Asset", author: "purepearl studio", rating: 4.2, level: "beginner", price: 25, duration: "lifetime", lessons: 30, length: 300, comments: 200
     },
     {
-        category: ["Featured", "Data Science"], cover: bigdata, name: "The Power of Big Data", author: "engineering mind", rating: 4.5, level: "intermediate", price: 10, duration: "month", lessons: 25, length: 136, comments: 73
+        category: ["Featured", "Data Science"], cover: bigdata, name: "The Power of Big Data", author: "engineering mind", rating: 3.9, level: "intermediate", price: 10, duration: "month", lessons: 25, length: 136, comments: 73
     },
     {
-        category: ["Featured", "Productivity"], cover: productivity, name: "Balancing Productivity and Self-Care", author: "howtown", rating: 4.5, level: "beginner", price: 10, duration: "month", lessons: 46, length: 560, comments: 722
+        category: ["Featured", "Productivity"], cover: productivity, name: "Balancing Productivity and Self-Care", author: "howtown", rating: 4.8, level: "beginner", price: 10, duration: "month", lessons: 46, length: 560, comments: 722
     },
     {
-        category: ["Featured", "Productivity"], cover: money, name: "Mastering Money Management", author: "howtown", rating: 4.5, level: "intermediate", price: 10, duration: "month", lessons: 5, length: 59, comments: 365
+        category: ["Featured", "Productivity"], cover: money, name: "Mastering Money Management", author: "howtown", rating: 4.1, level: "intermediate", price: 10, duration: "month", lessons: 5, length: 59, comments: 365
     },
     {
-        category: ["Featured", "Freelance & Entrepreneurship"], cover: idea, name: "From Idea to Startup Success", author: "howtown", rating: 4.5, level: "advanced", price: 50, duration: "lifetime", lessons: 60, length: 400, comments: 122
+        category: ["Featured", "Freelance & Entrepreneurship"], cover: idea, name: "From Idea to Startup Success", author: "howtown", rating: 4.7, level: "advanced", price: 50, duration: "lifetime", lessons: 60, length: 400, comments: 122
     },
 ]
 export function Courses() {
@@ -110,7 +108,7 @@ export function Courses() {
                                     </div>
 
                                     <div>
-                                        <div className="flex items-center font-body text-lg">{course.rating}<Star /></div>
+                                        <div className="flex gap-1 items-center font-body text-lg">{course.rating}<Star /></div>
                                     </div>
                                 </div>
 
@@ -126,6 +124,7 @@ export function Courses() {
                                                 </div>
                                             )
                                         }
+                                        <div className="rounded-full bg-electric-lime-400 flex items-center justify-center text-xs font-label">{course.lessons}+</div>
                                     </div>
                                 </div>
 
