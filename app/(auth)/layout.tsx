@@ -1,4 +1,4 @@
-import Logo from "@/public/logo.png";
+import Logo from "@/public/assets/logo/logo_icon.png";
 import Image from "next/image";
 import Link from "next/link";
 

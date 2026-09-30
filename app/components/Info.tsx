@@ -1,9 +1,9 @@
 import Image from "next/image";
-import about1 from "@/public/about1.png";
-import about2 from "@/public/about2.png";
+import about1 from "@/public/assets/frames/about1.png";
+import about2 from "@/public/assets/frames/about2.png";
 import { CircleCheck } from "lucide-react";
 
-export function Info() {
+export async function Info() {
     return (
         <section id="info" className="bg-shuttle-gray-50 min-h-365 w-full mx-auto py-8 flex flex-col justify-center">
             <div className="w-full max-w-7xl mx-auto px-8 flex flex-col gap-18 justify-between items-center">
@@ -11,10 +11,10 @@ export function Info() {
                 <div className="flex items-center gap-16">
 
                     <div className="w-1/2 flex flex-col gap-10">
-                        <h3 className="font-semibold text-[44px] leading-[120%] text-shuttle-gray-950">
+                        <h3 className="font-semibold text-[44px]   text-shuttle-gray-950">
                             Your Path to Professional Growth Starts Here!
                         </h3>
-                        <p className="w-120 font-body text-lg text-shuttle-gray-700 leading-[160%]">
+                        <p className="w-120 font-body text-lg text-shuttle-gray-700  ">
                             Explore our curated selection of courses tailored to enhance your capabilities and accelerate your career journey. Whether you are looking to sharpen specific skills, gain industry expertise, or embark on a new career path entirely, we have the resources you need.
                         </p>
                         <div className="flex gap-14">
@@ -34,7 +34,7 @@ export function Info() {
                     </div>
 
                     <div className="w-1/2 hover:scale-105 transition-transform duration-500">
-                        <Image src={about1} alt="about1" height={552} width={621} />
+                        <Image src={about1} alt="about1" className="h-125 w-auto" />
                     </div>
 
                 </div>
@@ -42,16 +42,16 @@ export function Info() {
                 <div className="flex items-center gap-16">
 
                     <div className="w-1/2 hover:scale-105 transition-transform duration-500">
-                        <Image src={about2} alt="about2" height={550} width={500} />
+                        <Image src={about2} alt="about2" className="h-125 w-auto" />
                     </div>
 
                     <div className="w-1/2">
 
                         <div className=" flex flex-col gap-10">
-                            <h3 className="font-semibold text-[44px] leading-[120%] text-shuttle-gray-950">
+                            <h3 className="font-semibold text-[44px]   text-shuttle-gray-950">
                                 Create & Manage Courses Easily.
                             </h3>
-                            <p className="text-lg font-body text-shuttle-gray-700 leading-[160%]">
+                            <p className="text-lg font-body text-shuttle-gray-700  ">
                                 <span className="text-shuttle-gray-950 font-semibold">ByteSpace</span> supports individuals or entities in the creation, publication, and administration of educational courses.
                             </p>
                             <div className="flex gap-14 text-shuttle-gray-950 font-label text-lg">

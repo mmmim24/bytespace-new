@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 
-export default function RegisterForm() {
+export function RegisterForm() {
     return (
         <div className="flex flex-col justify-between">
             <div className="m-15 flex flex-col gap-10">
@@ -11,7 +11,7 @@ export default function RegisterForm() {
                     <p className="font-body text-lg text-persian-blue-800">
                         Create an account
                     </p>
-                    <h1 className="text-[44px] leading-13 font-semibold text-shuttle-gray-950">
+                    <h1 className="text-[44px] font-semibold text-shuttle-gray-950">
                         Welcome to ByteSpace
                     </h1>
                 </div>

@@ -1,6 +1,6 @@
 import Image from "next/image"
-import Banner from "@/public/auth_banner.png";
-import LoginForm from "@/app/components/Login";
+import Banner from "@/public/assets/frames/auth_banner.png";
+import { LoginForm } from "@/app/components/Login";
 
 export default async function Login() {
     return <div className="text-shuttle-gray-50 w-full max-w-7xl mx-auto px-8">

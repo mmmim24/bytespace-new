@@ -1,34 +1,8 @@
 import Image from "next/image";
-import design from "@/public/design.png";
-import development from "@/public/development.png";
-import it from "@/public/it.png";
-import business from "@/public/business.png";
-import marketing from "@/public/marketing.png";
-import photography from "@/public/photography.png";
+import { learningPaths } from "@/app/utils/data";
 import { Courses } from "./Courses";
 
-const learningPaths = [
-    {
-        icon: design, name: "Design"
-    },
-    {
-        icon: development, name: "Development"
-    },
-    {
-        icon: it, name: "IT & Software"
-    },
-    {
-        icon: business, name: "Business"
-    },
-    {
-        icon: marketing, name: "Marketing"
-    },
-    {
-        icon: photography, name: "Photography"
-    },
-]
-
-export function Discover() {
+export async function Discover() {
 
     return (
         <section id="discover" className="bg-white min-h-365 w-full mx-auto py-16 flex flex-col justify-center">

@@ -1,74 +1,10 @@
 "use client"
-import { useState } from "react";
-import figma from "@/public/figma_course.png";
-import digital_asset from "@/public/digital_asset_course.png";
-import bigdata from "@/public/bigdata_course.png";
-import productivity from "@/public/productivity_course.png";
-import money from "@/public/money_course.png";
-import idea from "@/public/idea_course.png";
-import Ellipse from "@/public/Ellipse.png";
-import Ellipse_1 from "@/public/Ellipse_1.png";
-import Ellipse_2 from "@/public/Ellipse_2.png";
-import Ellipse_3 from "@/public/Ellipse_3.png";
 import Image from "next/image";
+import { useState } from "react";
+import { minutesToHours } from "@/app/utils/lib";
+import { categories, courses, users } from "@/app/utils/data";
 import { ChartNoAxesColumnIncreasing, Star } from "lucide-react";
 
-const categories = [
-    "Featured",
-    "Music",
-    "Drawing & Painting",
-    "Marketing",
-    "Animation",
-    "Social Media",
-    "UI/UX Design",
-    "Creative Marketing",
-    "Digital Illustration",
-    "Film & Video",
-    "Crafts",
-    "Freelance & Entrepreneurship",
-    "Graphic Design",
-    "Photography",
-    "Productivity",
-    "Web Development",
-    "Data Science",
-    "Cooking"
-]
-
-const users = [
-    { user: Ellipse },
-    { user: Ellipse_1 },
-    { user: Ellipse_2 },
-    { user: Ellipse_3 }
-]
-
-const minutesToHours = (minutes: number) => {
-    if (minutes < 60) return `${minutes} minutes`;
-    else {
-        let m = minutes % 60, h = Math.trunc(minutes / 60);
-        return `${h} hours ${m} mins`;
-    }
-}
-
-const courses = [
-    {
-        category: ["Featured", "UI/UX Design"], cover: figma, name: "Learn Figma from Basic", author: "purepearl studio", rating: 4.5, level: "beginner", price: 25, duration: "lifetime", lessons: 17, length: 136, comments: 59
-    },
-    {
-        category: ["Featured", "Digital Illustration"], cover: digital_asset, name: "Build Digital Asset", author: "purepearl studio", rating: 4.2, level: "beginner", price: 25, duration: "lifetime", lessons: 30, length: 300, comments: 200
-    },
-    {
-        category: ["Featured", "Data Science"], cover: bigdata, name: "The Power of Big Data", author: "engineering mind", rating: 3.9, level: "intermediate", price: 10, duration: "month", lessons: 25, length: 136, comments: 73
-    },
-    {
-        category: ["Featured", "Productivity"], cover: productivity, name: "Balancing Productivity and Self-Care", author: "howtown", rating: 4.8, level: "beginner", price: 10, duration: "month", lessons: 46, length: 560, comments: 722
-    },
-    {
-        category: ["Featured", "Productivity"], cover: money, name: "Mastering Money Management", author: "howtown", rating: 4.1, level: "intermediate", price: 10, duration: "month", lessons: 5, length: 59, comments: 365
-    },
-    {
-        category: ["Featured", "Freelance & Entrepreneurship"], cover: idea, name: "From Idea to Startup Success", author: "howtown", rating: 4.7, level: "advanced", price: 50, duration: "lifetime", lessons: 60, length: 400, comments: 122
-    },
-]
 export function Courses() {
     const [isSelected, setIsSelected] = useState("Featured");
 
@@ -99,7 +35,7 @@ export function Courses() {
 
                                 <div className="flex justify-between items-baseline">
                                     <div>
-                                        <h5 className="text-shuttle-gray-950 text-xl font-semibold leading-[120%]">
+                                        <h5 className="text-shuttle-gray-950 text-xl font-semibold  ">
                                             {
                                                 course.name.length > 20 ? <p>{course.name.slice(0, 20)}...</p> : course.name
                                             }
